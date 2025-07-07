@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Cost Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div class="container">
+                <h1>Vehicle Cost Calculator</h1>
+
+        <div class="unit-selector">
+            <span>Units:</span>
+            <label class="radio-label">
+                <input type="radio" name="units" value="metric" checked>
+                Metric
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="units" value="imperial">
+                Imperial
+            </label>
+        </div>
+
+        <div class="columns">
+            <div class="column">
+                <h2>Gasoline Vehicle</h2>
+                <div class="input-group">
+                    <label for="gas-consumption">Consumption (L/100km)</label>
+                    <input id="gas-consumption" type="number" placeholder="e.g., 8.5">
+                </div>
+                <div class="input-group">
+                    <label for="gas-price">Gasoline Price (€/L)</label>
+                    <input id="gas-price" type="number" placeholder="e.g., 1.85">
+                </div>
+                <div class="result" id="gas-result"></div>
+            </div>
+
+            <div class="column">
+                <h2>Electric Vehicle</h2>
+                <div class="input-group">
+                    <label for="ev-consumption">Consumption (kWh/100km)</label>
+                    <input id="ev-consumption" type="number" placeholder="e.g., 17.5">
+                </div>
+                <div class="input-group">
+                    <label for="ev-price">Electricity Price (€/kWh)</label>
+                    <input id="ev-price" type="number" placeholder="e.g., 0.22">
+                </div>
+                <div class="result" id="ev-result"></div>
+            </div>
+        </div>
+
+        <div id="comparison-result" class="comparison"></div>
+
+        <div class="actions">
+            <button id="calculate-btn" class="button">Calculate</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

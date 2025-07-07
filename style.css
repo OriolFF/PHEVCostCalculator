@@ -1,0 +1,129 @@
+
+body {
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #004d40;
+    margin-bottom: 2rem;
+}
+
+.unit-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.columns {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #004d40;
+    min-height: 2rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #004d40;
+    box-shadow: 0 0 0 2px rgba(0, 77, 64, 0.2);
+}
+
+.button {
+    background-color: #00796b; /* A nice teal color */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+input[type="radio"] {
+    accent-color: #00796b;
+}
+
+.comparison {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 8px;
+    display: none; /* Hidden by default */
+}
+
+.comparison.cheaper {
+    background-color: #e8f5e9; /* Light green for when EV is cheaper */
+    color: #1b5e20; /* Dark green text */
+}
+
+.comparison.more-expensive {
+    background-color: #ffebee; /* Light red for when Gas is cheaper */
+    color: #b71c1c; /* Dark red text */
+}
